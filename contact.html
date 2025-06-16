@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Purple Clone</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Purple Clone</div>
+    <nav class="navbar">
+      <a href="home.html">Home</a>
+      <a href="fashion.html">Fashion</a>
+      <a href="dresses.html">Dresses</a>
+      <a href="electronics.html">Electronics</a>
+      <a href="beauty.html">Beauty Products</a>
+      <a href="skincare.html">Skincare Products</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main class="form-container">
+    <h2>Contact Us</h2>
+    <form onsubmit="return validateContactForm()">
+      <input type="text" id="contactName" placeholder="Your Name" required />
+      <input type="email" id="contactEmail" placeholder="Your Email" required />
+      <textarea id="contactMessage" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <script>
+    function validateContactForm() {
+      const name = document.getElementById("contactName").value.trim();
+      const email = document.getElementById("contactEmail").value.trim();
+      const message = document.getElementById("contactMessage").value.trim();
+
+      if (!name || !email || !message) {
+        alert("Please fill out all fields.");
+        return false;
+      }
+
+      alert("Thank you for contacting us!");
+      return false;
+    }
+  </script>
+</body>
+</html>
